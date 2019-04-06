@@ -1,13 +1,14 @@
 Acces to Raspberry PI - https://github.com/mozilla-iot/wiki/wiki/Logging-into-the-Raspberry-Pi
-How to receive 433Mgz - https://github.com/sui77/rc-switch/wiki/HowTo_Receive
+How to receive 433Mhz - https://github.com/sui77/rc-switch/wiki/HowTo_Receive
 Github page - https://github.com/Hedin9000/IoT
 Lazurite home automation - https://noant.github.io/Lazurite/
 ESP8266 info - https://habr.com/ru/post/390593/
 WoT Node.JS example - https://github.com/mozilla-iot/webthing-node
 WoT ESP8266 example - https://github.com/mozilla-iot/webthing-arduino
 Wot Examples - https://mozilla-iot.github.io/things/
-Toggle RUles problem - https://discourse.mozilla.org/t/toggle-option-for-rules/34420
-Node.JS autostart - https://medium.com/@andrew.nease.code/set-up-a-self-booting-node-js-eb56ebd05549
+Toggle Rules problem - https://discourse.mozilla.org/t/toggle-option-for-rules/34420
+Node.JS service autostart - https://medium.com/@andrew.nease.code/set-up-a-self-booting-node-js-eb56ebd05549
 Creating an Add-on for the Project Things Gateway - https://hacks.mozilla.org/2018/02/creating-an-add-on-for-the-project-things-gateway/
 Implement Actions and Events in Adapter - https://discourse.mozilla.org/t/adapter-that-communicates-with-many-devices/36009
 Adapter API - https://github.com/mozilla-iot/wiki/wiki/Adapter-API
+Add-On Configuration - https://github.com/mozilla-iot/wiki/wiki/Add-On-Configuration

@@ -1,9 +1,9 @@
 {
-  "name": "example-adapter",
-  "display_name": "Example",
-  "version": "0.5.0",
-  "description": "Example adapter add-on for Mozilla WebThings Gateway",
-  "author": "Mozilla IoT",
+  "name": "low-power-button-adapter",
+  "display_name": "Low Power Button Adapter",
+  "version": "0.1.0",
+  "description": "Low power button (433Mhz) adapter add-on for Mozilla WebThings Gateway",
+  "author": "Hedin",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ."
@@ -12,7 +12,8 @@
     "mozilla",
     "iot",
     "adapter",
-    "example"
+    "example",
+    "lowPower"
   ],
   "homepage": "https://github.com/mozilla-iot/example-adapter",
   "license": "MPL-2.0",
@@ -38,6 +39,33 @@
       "max": 2
     },
     "plugin": true,
-    "exec": "{nodeLoader} {path}"
+    "exec": "{nodeLoader} {path}",
+    "config": {
+      "ldpButtons": []
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "ldpButtons": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "ldpCode"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "ldpCode": {
+                "type": "number",
+                "description": "LdpCode"
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
