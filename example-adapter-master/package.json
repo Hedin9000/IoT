@@ -24,6 +24,9 @@
   "bugs": {
     "url": "https://github.com/mozilla-iot/example-adapter/issues"
   },
+  "dependencies": {
+    "serialport": "^6.1.1"
+  },
   "devDependencies": {
     "eslint": "^5.12.0"
   },
