@@ -21,7 +21,9 @@ const {
 } = require('gateway-addon');
 
 
+const SerialPort = require('serialport');
 
+const Readline = require('@serialport/parser-readline');
 
 
 class LowPowerButton extends Device{
@@ -31,7 +33,8 @@ class LowPowerButton extends Device{
     this.LpdCode = config.ldpCode;
     this.addEvent('Pressed', {
       '@type': 'PressedEvent',
-    });    
+    });
+    this.adapter.handleDeviceAdded(this);    
   }
 }
 
