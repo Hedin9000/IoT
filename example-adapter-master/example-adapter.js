@@ -34,6 +34,7 @@ class LowPowerButton extends Device{
     this.addEvent('Pressed', {
       '@type': 'PressedEvent',
     });
+    console.log("Load "+ "lpd-" + config.ldpCode + "button ("+config.name+")");
     this.adapter.handleDeviceAdded(this);    
   }
 }
@@ -58,13 +59,16 @@ class LowPowerButtonAdapter extends Adapter {
      
         console.log('got word from arduino:', data);
         // Ищем утсройство с пришедшим кодом.
-        const things = this.getDevices();
-        var lpdButton = things.find(function(button) {
-          return button.LdpCode == data;
-        });
-        // Если найдено - бросаем событие
-        if(ldpButton != null)
-          ldpButton.eventNotify(new Event(device, 'Pressed'));
+        const thing = this.getDevice("lpd-"+data);
+         // Если найдено - бросаем событие
+          if(thing != null){
+            thing.eventNotify(new Event(thing, 'Pressed'));
+            console.log("Fire Pressed event to ", thing.id);
+
+          } 
+      
+    
+       
      
        
       });    
