@@ -1,9 +1,9 @@
 #include <Arduino.h>
 #include "Thing.h"
 #include "WebThingAdapter.h"
-
-const char* ssid = "";
-const char* password = "";
+//https://habr.com/ru/post/390593/
+const char* ssid = "IoT";
+const char* password = "ASCIIASCII";
 
 
 const int ledPin = 0;  // manually configure LED pin
@@ -12,14 +12,14 @@ const int ledPin = 0;  // manually configure LED pin
 WebThingAdapter* adapter;
 
 const char* ledTypes[] = {"OnOffSwitch", "Light", nullptr};
-ThingDevice led("led", "Built-in LED", ledTypes);
+ThingDevice led("led", "WiFi Relay 07", ledTypes);
 ThingProperty ledOn("on", "", BOOLEAN, "OnOffProperty");
 
 bool lastOn = false;
 
 void setup(void){
   pinMode(ledPin, OUTPUT);
-  // digitalWrite(ledPin, HIGH);
+   digitalWrite(ledPin, LOW);
   Serial.begin(115200);
   Serial.println("");
   Serial.print("Connecting to \"");
@@ -39,7 +39,7 @@ void setup(void){
    // digitalWrite(ledPin, blink ? LOW : HIGH); // active low led
     blink = !blink;
   }
-  digitalWrite(ledPin, HIGH); // active low led
+  //digitalWrite(ledPin, HIGH); // active low led
 
   Serial.println("");
   Serial.print("Connected to ");

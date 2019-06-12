@@ -12,3 +12,4 @@ Creating an Add-on for the Project Things Gateway - https://hacks.mozilla.org/20
 Implement Actions and Events in Adapter - https://discourse.mozilla.org/t/adapter-that-communicates-with-many-devices/36009
 Adapter API - https://github.com/mozilla-iot/wiki/wiki/Adapter-API
 Add-On Configuration - https://github.com/mozilla-iot/wiki/wiki/Add-On-Configuration
+DHT usage - https://arduino-kit.ru/blogs/blog/41-podklyuchenie-datchika-vlazhnosti-i-temperatury-dht11-dht22
