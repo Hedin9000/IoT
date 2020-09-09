@@ -1,18 +1,17 @@
 #include <Arduino.h>
-#include "Thing.h"
 #include "WebThingAdapter.h"
 //https://habr.com/ru/post/390593/
-const char* ssid = "IoT";
-const char* password = "ASCIIASCII";
+const char* ssid = "SCP Foundation 2G";
+const char* password = "Earthn2160";
 
 
-const int ledPin = 0;  // manually configure LED pin
+const int ledPin = 12;  // manually configure LED pin
 
 
 WebThingAdapter* adapter;
 
 const char* ledTypes[] = {"OnOffSwitch", "Light", nullptr};
-ThingDevice led("led", "WiFi Relay 07", ledTypes);
+ThingDevice led("led", "WiFi Relay SN1", ledTypes);
 ThingProperty ledOn("on", "", BOOLEAN, "OnOffProperty");
 
 bool lastOn = false;
